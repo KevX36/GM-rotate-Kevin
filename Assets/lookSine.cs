@@ -30,26 +30,10 @@ public class lookSine : MonoBehaviour
         if (timer >= 10)
         {
             timer = 0;
-            if (MadeItToFar == false)
-            {
-                MadeItToFar = (true);
-            }
-            else if (MadeItToFar == true)
-            {
-                MadeItToFar = (false);
-            }
-        }
-        
-        if (MadeItToFar == false)
-        {
-            cube.transform.position = Vector3.Slerp(start, far, timer / 10);
             
         }
-        if (MadeItToFar == true)
-        {
-            cube.transform.position = Vector3.Slerp(far, start, timer / 10);
-            
-        }
+
+        cube.transform.position = Vector3.Slerp(start, far, timer / 10);
 
 
 
